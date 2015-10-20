@@ -1,0 +1,480 @@
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ iniset /opt/stack/tempest/etc/tempest.conf scenario img_file cirros-0.3.4-x86_64-disk.img
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ iniset /opt/stack/tempest/etc/tempest.conf scenario large_ops_number 0
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ iniset /opt/stack/tempest/etc/tempest.conf telemetry-feature-enabled events True
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ local object_storage_api_extensions=all
+++ [[ ! -z '' ]]
+++ iniset /opt/stack/tempest/etc/tempest.conf object-storage-feature-enabled discoverable_apis all
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ iniset /opt/stack/tempest/etc/tempest.conf validation run_validation False
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ iniset /opt/stack/tempest/etc/tempest.conf volume-feature-enabled bootable True
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ iniset /opt/stack/tempest/etc/tempest.conf volume-feature-enabled extend_with_snapshot True
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ local volume_api_extensions=all
+++ [[ ! -z '' ]]
+++ iniset /opt/stack/tempest/etc/tempest.conf volume-feature-enabled api_extensions all
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ is_service_enabled c-bak
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 1
+++ iniset /opt/stack/tempest/etc/tempest.conf volume-feature-enabled backup False
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ [[ -n lvm:lvmdriver-1 ]]
+++ [[ lvm:lvmdriver-1 =~ .*,.* ]]
+++ '[' default '!=' default -o 'Open Source' '!=' 'Open Source' ']'
+++ '[' default '!=' default -o iSCSI '!=' iSCSI ']'
+++ iniset /opt/stack/tempest/etc/tempest.conf dashboard dashboard_url http://192.168.146.131/
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ iniset /opt/stack/tempest/etc/tempest.conf dashboard login_url http://192.168.146.131/auth/login/
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ iniset /opt/stack/tempest/etc/tempest.conf cli cli_dir /usr/local/bin
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ '[' libvirt = ironic ']'
+++ '[' libvirt = libvirt ']'
+++ '[' qemu = lxc ']'
+++ TEMPEST_SERVICES=key,glance,nova,neutron,cinder,swift,heat,ceilometer,horizon,sahara,ironic,trove
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled key
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 0
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available key True
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled glance
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 0
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available glance True
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled nova
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 0
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available nova True
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled neutron
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 1
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available neutron False
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled cinder
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 0
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available cinder True
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled swift
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 1
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available swift False
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled heat
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 1
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available heat False
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled ceilometer
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 1
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available ceilometer False
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled horizon
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 0
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available horizon True
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled sahara
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 1
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available sahara False
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled ironic
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 1
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available ironic False
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ for service in '${TEMPEST_SERVICES//,/ }'
+++ is_service_enabled trove
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 1
+++ iniset /opt/stack/tempest/etc/tempest.conf service_available trove False
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ is_ssl_enabled_service key
+++ local services=key
+++ local service=
+++ '[' False == False ']'
+++ return 1
+++ is_service_enabled tls-proxy
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 1
+++ iniset /opt/stack/tempest/etc/tempest.conf auth tempest_roles Member
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ [[ False == \T\r\u\e ]]
+++ iniset /opt/stack/tempest/etc/tempest.conf auth allow_tenant_isolation True
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ IFS=' 	
+'
+++ init_tempest
+++ local base_image_name=cirros-0.3.4-x86_64
+++ local image_dir=/home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec
+++ local kernel=/home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec/cirros-0.3.4-x86_64-vmlinuz
+++ local ramdisk=/home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec/cirros-0.3.4-x86_64-initrd
+++ local disk_image=/home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec/cirros-0.3.4-x86_64-blank.img
+++ is_service_enabled nova
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ return 0
+++ '[' -f /home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec/cirros-0.3.4-x86_64-vmlinuz -a -f /home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec/cirros-0.3.4-x86_64-initrd -a -f /home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec/cirros-0.3.4-x86_64-blank.img -a libvirt '!=' openvz -a '(' qemu '!=' lxc -o libvirt '!=' libvirt ')' ']'
+++ echo 'Prepare aki/ari/ami Images'
+Prepare aki/ari/ami Images
+++ mkdir -p /home/sdnuser/devstack/files/images/s3-materials/cirros-0.3.4
+++ cat
+++ is_package_installed euca2ools
+++ [[ -z euca2ools ]]
+++ [[ -z deb ]]
+++ [[ deb = \d\e\b ]]
+++ dpkg -s euca2ools
+++ install_package euca2ools
+++ update_package_repo
+++ NO_UPDATE_REPOS=False
+++ REPOS_UPDATED=True
+++ RETRY_UPDATE=False
+++ [[ False = \T\r\u\e ]]
+++ is_ubuntu
+++ [[ -z deb ]]
+++ '[' deb = deb ']'
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ real_install_package euca2ools
+++ is_ubuntu
+++ [[ -z deb ]]
+++ '[' deb = deb ']'
+++ apt_get install euca2ools
++++ grep xtrace
++++ set +o
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ sudo DEBIAN_FRONTEND=noninteractive http_proxy= https_proxy= no_proxy= apt-get --option Dpkg::Options::=--force-confold --assume-yes install euca2ools
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  python-chardet-whl python-colorama python-colorama-whl python-distlib
+  python-distlib-whl python-html5lib python-html5lib-whl python-pip-whl
+  python-requests-whl python-setuptools-whl python-six-whl python-urllib3-whl
+  python-wheel
+Use 'apt-get autoremove' to remove them.
+The following extra packages will be installed:
+  python-requestbuilder
+The following NEW packages will be installed:
+  euca2ools python-requestbuilder
+0 upgraded, 2 newly installed, 0 to remove and 341 not upgraded.
+Need to get 276 kB of archives.
+After this operation, 1277 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty/main python-requestbuilder all 0.1.0~beta2-1build1 [25.4 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ trusty/main euca2ools all 3.0.2-1ubuntu1 [251 kB]
+Fetched 276 kB in 2s (135 kB/s)
+Selecting previously unselected package python-requestbuilder.
+(Reading database ... 187288 files and directories currently installed.)
+Preparing to unpack .../python-requestbuilder_0.1.0~beta2-1build1_all.deb ...
+Unpacking python-requestbuilder (0.1.0~beta2-1build1) ...
+Selecting previously unselected package euca2ools.
+Preparing to unpack .../euca2ools_3.0.2-1ubuntu1_all.deb ...
+Unpacking euca2ools (3.0.2-1ubuntu1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up python-requestbuilder (0.1.0~beta2-1build1) ...
+Setting up euca2ools (3.0.2-1ubuntu1) ...
+++ real_install_package euca2ools
+++ is_ubuntu
+++ [[ -z deb ]]
+++ '[' deb = deb ']'
+++ apt_get install euca2ools
++++ set +o
++++ grep xtrace
+++ local 'xtrace=set -o xtrace'
+++ set +o xtrace
+++ sudo DEBIAN_FRONTEND=noninteractive http_proxy= https_proxy= no_proxy= apt-get --option Dpkg::Options::=--force-confold --assume-yes install euca2ools
+Reading package lists...
+Building dependency tree...
+Reading state information...
+euca2ools is already the newest version.
+The following packages were automatically installed and are no longer required:
+  python-chardet-whl python-colorama python-colorama-whl python-distlib
+  python-distlib-whl python-html5lib python-html5lib-whl python-pip-whl
+  python-requests-whl python-setuptools-whl python-six-whl python-urllib3-whl
+  python-wheel
+Use 'apt-get autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 341 not upgraded.
+++ source /home/sdnuser/devstack/accrc/demo/demo
++++ export EC2_ACCESS_KEY=9a63d4e0cb594e34ab90bf220aa4e57b
++++ EC2_ACCESS_KEY=9a63d4e0cb594e34ab90bf220aa4e57b
++++ export EC2_SECRET_KEY=497f50f5578c4eeb85976f5c7ee1c6be
++++ EC2_SECRET_KEY=497f50f5578c4eeb85976f5c7ee1c6be
++++ export EC2_URL=http://192.168.146.131:8773/
++++ EC2_URL=http://192.168.146.131:8773/
++++ export S3_URL=http://localhost:3333
++++ S3_URL=http://localhost:3333
++++ export OS_USERNAME=demo
++++ OS_USERNAME=demo
++++ export OS_PROJECT_NAME=demo
++++ OS_PROJECT_NAME=demo
++++ export OS_AUTH_URL=http://192.168.146.131:35357/v2.0
++++ OS_AUTH_URL=http://192.168.146.131:35357/v2.0
++++ export OS_CACERT=
++++ OS_CACERT=
++++ export EC2_CERT=/home/sdnuser/devstack/accrc/demo/demo-cert.pem
++++ EC2_CERT=/home/sdnuser/devstack/accrc/demo/demo-cert.pem
++++ export EC2_PRIVATE_KEY=/home/sdnuser/devstack/accrc/demo/demo-pk.pem
++++ EC2_PRIVATE_KEY=/home/sdnuser/devstack/accrc/demo/demo-pk.pem
++++ export EC2_USER_ID=42
++++ EC2_USER_ID=42
++++ export EUCALYPTUS_CERT=/home/sdnuser/devstack/accrc/cacert.pem
++++ EUCALYPTUS_CERT=/home/sdnuser/devstack/accrc/cacert.pem
++++ export NOVA_CERT=/home/sdnuser/devstack/accrc/cacert.pem
++++ NOVA_CERT=/home/sdnuser/devstack/accrc/cacert.pem
++++ export OS_AUTH_TYPE=v2password
++++ OS_AUTH_TYPE=v2password
++++ export OS_PASSWORD=devstack
++++ OS_PASSWORD=devstack
++++ export OS_USER_DOMAIN_ID=default
++++ OS_USER_DOMAIN_ID=default
++++ unset OS_USER_DOMAIN_NAME
++++ export OS_PROJECT_DOMAIN_ID=default
++++ OS_PROJECT_DOMAIN_ID=default
++++ unset OS_PROJECT_DOMAIN_NAME
+++ euca-bundle-image -r x86_64 -i /home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec/cirros-0.3.4-x86_64-vmlinuz --kernel true -d /home/sdnuser/devstack/files/images/s3-materials/cirros-0.3.4
+Wrote manifest /home/sdnuser/devstack/files/images/s3-materials/cirros-0.3.4/cirros-0.3.4-x86_64-vmlinuz.manifest.xml
+++ euca-bundle-image -r x86_64 -i /home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec/cirros-0.3.4-x86_64-initrd --ramdisk true -d /home/sdnuser/devstack/files/images/s3-materials/cirros-0.3.4
+Wrote manifest /home/sdnuser/devstack/files/images/s3-materials/cirros-0.3.4/cirros-0.3.4-x86_64-initrd.manifest.xml
+++ euca-bundle-image -r x86_64 -i /home/sdnuser/devstack/files/images/cirros-0.3.4-x86_64-uec/cirros-0.3.4-x86_64-blank.img -d /home/sdnuser/devstack/files/images/s3-materials/cirros-0.3.4
+Wrote manifest /home/sdnuser/devstack/files/images/s3-materials/cirros-0.3.4/cirros-0.3.4-x86_64-blank.img.manifest.xml
+++ [[ stack == \u\n\s\t\a\c\k ]]
+++ [[ stack == \c\l\e\a\n ]]
++ [[ stack == \s\o\u\r\c\e ]]
++ [[ stack == \o\v\e\r\r\i\d\e\_\d\e\f\a\u\l\t\s ]]
++ run_plugins stack extra
++ local mode=stack
++ local phase=extra
++ local plugins=
++ local plugin
++ merge_config_group /home/sdnuser/devstack/local.conf post-extra
++ local localfile=/home/sdnuser/devstack/local.conf
++ shift
++ local matchgroups=post-extra
++ [[ -r /home/sdnuser/devstack/local.conf ]]
++ return 0
++ [[ -x /home/sdnuser/devstack/local.sh ]]
++ service_check
++ local service
++ local failures
++ SCREEN_NAME=stack
++ SERVICE_DIR=/opt/stack/status
++ [[ ! -d /opt/stack/status/stack ]]
+++ ls '/opt/stack/status/stack/*.failure'
+++ /bin/true
++ failures=
++ '[' -n '' ']'
++ check_libs_from_git
++ local lib=
++ local not_installed=
+++ echo
+++ tr , ' '
++ [[ -n '' ]]
++ openstack complete
++ sudo tee /etc/bash_completion.d/osc.bash_completion
++ is_service_enabled cinder
+++ set +o
+++ grep xtrace
++ local 'xtrace=set -o xtrace'
++ set +o xtrace
++ return 0
++ is_ubuntu
++ [[ -z deb ]]
++ '[' deb = deb ']'
++ echo_summary 'Configuring lvm.conf global device filter'
++ [[ -t 3 ]]
++ [[ True != \T\r\u\e ]]
++ echo -e Configuring lvm.conf global device filter
++ set_lvm_filter
++ local 'filter_suffix="r|.*|" ]  # from devstack'
++ local 'filter_string=global_filter = [ '
++ local pv
++ local vg
++ local line
+++ sudo pvs --noheadings -o name
++ for pv_info in '$(sudo pvs --noheadings -o name)'
+++ echo -e /dev/loop0
+++ sed 's/\/dev\///g'
+++ sed 's/ //g'
++ pv=loop0
++ new='"a|loop0|", '
++ filter_string='global_filter = [ "a|loop0|", '
++ for pv_info in '$(sudo pvs --noheadings -o name)'
+++ sed 's/\/dev\///g'
+++ sed 's/ //g'
+2015-10-07 13:31:51.715 | Configuring lvm.conf global device filter
+++ echo -e /dev/loop1
++ pv=loop1
++ new='"a|loop1|", '
++ filter_string='global_filter = [ "a|loop0|", "a|loop1|", '
++ filter_string='global_filter = [ "a|loop0|", "a|loop1|", "r|.*|" ]  # from devstack'
++ clean_lvm_filter
++ sudo sed -i 's/^.*# from devstack$//' /etc/lvm/lvm.conf
++ sudo sed -i '/# global_filter = \[*\]/a\    global_filter = [ "a|loop0|", "a|loop1|", "r|.*|" ]  # from devstack' /etc/lvm/lvm.conf
++ echo_summary 'set lvm.conf device global_filter to: global_filter = [ "a|loop0|", "a|loop1|", "r|.*|" ]  # from devstack'
++ [[ -t 3 ]]
++ [[ True != \T\r\u\e ]]
++ echo -e set lvm.conf device global_filter to: global_filter = '[' '"a|loop0|",' '"a|loop1|",' '"r|.*|"' ']' '#' from devstack
++ set +o xtrace
+
+
+
+This is your host IP address: 192.168.146.131
+This is your host IPv6 address: ::1
+Horizon is now available at http://192.168.146.131/dashboard
+Keystone is serving at http://192.168.146.131:5000/
+The default users are: admin and demo
+The password: devstack
+2015-10-07 13:31:51.828 | set lvm.conf device global_filter to: global_filter = [ "a|loop0|", "a|loop1|", "r|.*|" ] # from devstack
+2015-10-07 13:31:51.835 | stack.sh completed in 1660 seconds.
+
+
+
+#starting opendalylight comtoller
+cd /opt/bvc/bim ./start

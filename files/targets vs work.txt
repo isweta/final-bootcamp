@@ -1,0 +1,48 @@
+Routine:
+1.opendaylight
+2. bvc controlller
+3. networks basics
+
+
+
+21/9/15
+Target:
+1. Get monitor queuing thing done---done
+2. Plex Media Serer remote access problem-----done
+3.publish subscribe model
+4. publish data in better manner
+5/ audio server--done
+
+
+
+Work Done:
+1. Installed java 8
+2. installe eclipse
+3. COnnecting to url using basic authentication 
+	http://www1.brocade.com/downloads/documents/html_product_manuals/vyatta/vyatta_5600_manual_321R5/wwhelp/wwhimpl/js/html/wwhelp.htm
+	http://stackoverflow.com/questions/15678208/making-put-request-with-json-data-using-httpurlconnection-is-not-working
+	reference http://www.avajava.com/tutorials/lessons/how-do-i-connect-to-a-url-using-basic-authentication.html
+4. Readinr http request headers
+	http://www.tutorialspoint.com/http/index.htm
+5. Reading broacde doc , operation al commands rest api	
+6. installed subsonic audio streaming server
+
+
+22/9/15
+Target 
+	Work
+	1. Complete publish data in better manner---done
+	2. streaming vs video conferencing
+	3. Stream processing the data
+	
+	Learning
+	1. java 8 streams api
+	2. java 8 concurrency
+	3.format java strings
+	4. statistics
+
+	
+1/10/15
+		1.d3.js
+
+

@@ -1,0 +1,26 @@
+pip
+	packet manager to install soft packages written in python
+	installs pakages in usr/local/lib/python2.7/dist-packages
+	
+Unix
+	/bin	This is where the executable files are located. They are available to all user.
+	/etc	Supervisor directory commands, configuration files, disk configuration files, valid user lists, groups, ethernet, hosts, where to send critical messages.
+	/lib	Contains shared library files and sometimes other kernel-related files.
+	/usr	Used for miscellaneous purposes, or can be used by many users. Includes administrative commands, shared files, library files, and others
+	/var	Typically contains variable-length files such as log and print files and any other type of file that may contain a variable amount of data
+	/sbin	Contains binary (executable) files, usually for system administration. For example fdisk and ifconfig utlities.
+	
+Port forwarding via SSH (SSH tunneling) creates a secure connection between a local computer and a remote machine through which services can be relayed. Because the connection is encrypted, SSH tunneling is useful for transmitting information that uses an unencrypted protocol, such as IMAP, VNC, or IRC
+
+
+
+If you wish to send an empty post request, it will give error 411
+send a dummy string instead
+
+oneormore spaces ignore \\s++
+
+
+
+JAVA Streams
+1. process without how to- process data in a declarative way
+2. process large collections- leverage multi-core architectures without you having to write a single line of multithread code

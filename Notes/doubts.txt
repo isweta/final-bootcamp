@@ -1,0 +1,5 @@
+ IP
+# being moved from an Ethernet interface to a bridge on the host. 
+#ipv4 forwarding
+#rp filter
+

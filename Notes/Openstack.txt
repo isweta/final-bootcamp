@@ -1,0 +1,32 @@
+Openstack
+
+
+KVM-Kernel-based Virtual Machine (KVM) is a virtualization infrastructure for the Linux kernel that turns it into a hypervisor.
+Hypervisor-A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines.
+OVSDB (Open vSwitch Database Management Protocol) definition. The Open vSwitch Database Management Protocol (OVSDB) is an OpenFlow configuration protocol that is designed to manage Open vSwitch implementations.
+
+
+route -n
+vi /etc/resolv.conf
+
+
+ Install and configure network node
+
+The network node primarily handles internal and external routing and DHCP services for virtual networks.
+
+ 
+To configure prerequisites
+
+Before you install and configure OpenStack Networking, you must configure certain kernel networking parameters.
+
+Edit the /etc/sysctl.conf file to contain the following parameters:
+
+net.ipv4.ip_forward=1
+net.ipv4.conf.all.rp_filter=0
+net.ipv4.conf.default.rp_filter=0
+
+Implement the changes:
+
+#sudo  sysctl -p
+
+Note: /etc/sysctl.conf - Configuration file for setting system variables

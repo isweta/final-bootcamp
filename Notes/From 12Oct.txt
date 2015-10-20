@@ -1,0 +1,225 @@
+12/10/15
+
+Objective				Things Done																		Learnings													Doubts								Achievement
+1.Setup devstack		All in one single vm devtsack
+						http://www.gossamer-threads.com/lists/openstack/dev/34239
+						git clone https://git.openstack.org/openstack-dev/devstack	
+						(with at-least 8GB memory and 40GB of disk space)
+						Changing ownership of file or dir ubuntu
+						sudo chmod u+x tools/create-stack-user.sh 										
+						sudo tools/create-stack-user.sh                                                 
+						sudo chown -R stack:stack /opt/stack                                            
+						sudo chown -R stack:stack /etc/keystone                                         
+						sudo chown -R stack:stack /home/sdnuser/devstack                                
+						sudo su stack  
+						copy local.conf from devtsak/sample to devstack root dir
+						./stack.sh                                                                      
+						
+						
+						Changes to localrc
+						# Credentials
+						ADMIN_PASSWORD=devstack
+						MYSQL_PASSWORD=devstack
+						RABBIT_PASSWORD=devstack
+						SERVICE_PASSWORD=devstack
+						SERVICE_TOKEN=devstack
+
+						# Services
+						disable_service n-net
+						enable_service q-svc
+						enable_service q-agt
+						enable_service q-dhcp
+						enable_service q-meta
+						enable_service quantum
+						enable_service q-lbaas
+						enable_service q-l3
+						enable_service swift
+						
+
+						
+						# Output
+						LOGFILE=/opt/stack/logs/stack.sh.log
+						VERBOSE=True
+						LOG_COLOR=False
+						SCREEN_LOGDIR=/opt/stack/logs
+
+						# Neutron Stuff
+						OVS_VLAN_RANGES=RegionOne:1:4000
+						OVS_ENABLE_TUNNELING=False
+
+						# Swift stuff
+						SWIFT_HASH=66a3d6b56c1f479c8b4e70ab5c2000f5
+						SWIFT_REPLICAS=1
+						
+2. Understand the		http://blog.sayalilunkad.com/posts/Devstack/
+ different services		changing password
+						sudo passwd stack, typr new pass
+						deleting user
+							sudo deluser stack
+							
+3. Undertsand Openstack	http://docs.openstack.org/icehouse/training-guides/content/associate-getting-started.html
+4. Brocade vyatta l3 plugin						https://wiki.openstack.org/wiki/Brocade_Vyatta_L3_Plugin
+									pip install networking-broacde
+									
+									
+									
+									
+									
+									
+12/10/15
+
+Learnings- Installing Plugins
+
+
+
+14/10/15
+
+Steps to install devstak
+have user stack
+1.git clone https://git.openstack.org/openstack-dev/devstack
+2.cd devstack copey loal.conf  devstack/samples/local.conf
+	disable_service n-net
+enable_service q-svc
+enable_service q-agt
+enable_service q-dhcp
+enable_service q-l3
+enable_service q-meta
+# Optional, to enable tempest configuration as part of devstack
+enable_service tempest
+
+and passwords
+3.sudo su stack
+
+sudo chown -R stack:stack /home/sdnuser/devstackfolder
+
+
+rm -rf /opt/stack
+rm -rf /usr/local/bin/
+
+./clean.sh
+./unstack.sh
+
+sudo apt-get install python-pip
+
+
+
+
+
+
+
+
+
+-----------------------------------------
+sudo apt-get -y update
+sudo apt-get -y install git
+git clone https://github.com/openstack-dev/devstack.git -b stable/kilo devstack/
+//created local.conf 
+
+disable_service n-net
+enable_service q-svc
+enable_service q-agt
+enable_service q-dhcp
+enable_service q-l3
+enable_service q-meta
+
+sudo chmod u+x tools/create-stack-user.sh 										
+	sudo tools/create-stack-user.sh                                                 
+						sudo chown -R stack:stack /opt/stack                                            
+						                                      
+						sudo chown -R stack:stack /home/sdnuser/devstack                                
+						sudo su stack  
+						copy local.conf from devtsak/sample to devstack root dir
+						./stack.sh                                                                      
+						
+						
+						
+						
+http://docs.openstack.org/networking-guide/intro_basic_networking.html
+
+
+
+
+verified
+
+			
+To get console working in kilo version 
+enable_service n-cauth in local.conf
+https://ask.openstack.org/en/question/66978/problem-to-load-consoles-with-kilo-devstack/
+https://www.youtube.com/watch?v=XB3WRl6-utY
+
+sudo pip install networking-brocade -t /opt/stack/brocadevrouter
+
+
+modifying virtual machine images
+http://docs.openstack.org/image-guide/content/ch_modifying_images.html
+
+creating simpleHtTpServer to share files between guest and host
+puthon -m SimpleHTTPServer inthe dir which you want to share
+
+
+/etc/neutron/neutron.conf
+service plugin=neutron.services.l3_router.l3_router_plugin.L3RouterPlugin
+changed to service plugin=brocade_vyatta_l3
+
+register plugin
+enable_plugin brocadevrouter
+https://wiki.openstack.org/wiki/NeutronDevstack
+
+checking neutron/neutron
+sudo pip install nose
+
+
+
+
+
+16/10/15
+http://docs.openstack.org/juno/config-reference/content/kvm.html
+http://docs.openstack.org/image-guide/content/ch_modifying_images.html
+http://docs.openstack.org/kilo/config-reference/content/iso-support.html
+http://docs.openstack.org/juno/config-reference/content/qemu.html
+http://docs.openstack.org/juno/config-reference/content/kvm.html
+http://www.brocade.com/content/html/en/vrouter5600/35r6/vrouter-35r6-usinglivecd/index.html
+http://www.brocade.com/content/html/en/vrouter5600/35r6/vrouter-35r6-installkvm/GUID-D4FE2AC9-5C4F-4589-96B0-DBCF0F686F4F.html
+http://www.brocade.com/content/html/en/vrouter5600/35r6/vrouter-35r6-installkvm/GUID-CA8F98F4-A757-44D7-A919-CB0C73DFBB5D.html
+http://docs.openstack.org/juno/config-reference/content/config_overview.html
+http://docs.openstack.org/developer/devstack/guides/single-machine.html
+http://docs.openstack.org/juno/install-guide/install/apt/content/neutron-compute-node.html
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Virtualization_Deployment_and_Administration_Guide/sect-Managing_guest_virtual_machines_with_virsh-Editing_a_guest_virtual_machines_configuration_file.html
+http://docs.openstack.org/image-guide/content/ch_modifying_images.html
+http://docs.openstack.org/developer/devstack/guides/single-machine.html
+
+VVI http://docs.openstack.org/networking-guide/intro_basic_networking.html
+
+https://wiki.openstack.org/wiki/Brocade_Vyatta_L3_Plugin
+he default location where pip installes packages on my Ubuntu system is '/usr/local/lib/pytho2.7/dist-packages/' 
+
+
+vvi
+http://docs.openstack.org/liberty/config-reference/content/section_networking-options-reference.html
+
+
+
+19/10/15
+targets
+-aws
+-network virtualization
+-l3 plugin
+
+
+
+very very imp
+http://docs.openstack.org/networking-guide/intro_basic_networking.html
+
+
+
+what are certificates
+
+scp innovhyd@10.76.110.103:/home/innovhyd/Downloads/*.pem .
+
+
+
+
+
+neutron.services.l3_router.brocade.vyatta.vrouter_neutron_plugin.VyattaVRouterPlugin
+
+						

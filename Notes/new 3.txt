@@ -1,0 +1,13 @@
+Extensive notes
+stack.sh 
+We have run this script initially to install Openstack. This script allows you to specify configuration options of what git repositories to use, enabled services, network configuration and various passwords. You need to run this script everytime you make any change to the OpenStack configuration or enable any new service.
+
+unstack.sh 
+Stops all the services started by stack.sh (mostly) mysql and rabbit are left running as OpenStack code refreshes do not require them to be restarted. Note that any changes made to the code should remain intact after running unstack.sh unless set otherwise.
+
+rejoin-stack.sh 
+This script rejoins an existing screen, or re-creates a screen session from a previous run of stack.sh. This means that if you have previously run stack.sh and you want to rejoin the session you run rejoin-stack.sh. Doing this restores all the data from the previous sessions. So do not be scared of loosing your data after rebooting your machine. 
+Just run ./unstack.sh 
+Then, reboot your machine
+When you want to join the session again run ./rejoin-stack.sh
+And you have all your data in place! You can check by accessing the dashboard on the same URL as before.

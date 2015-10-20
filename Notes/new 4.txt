@@ -1,0 +1,51 @@
+ Error: Service c-api is not running
+2015-10-12 10:19:24.680 | + for service in '$failures'
+2015-10-12 10:19:24.680 | ++ basename /opt/stack/status/stack/g-api.failure
+2015-10-12 10:19:24.680 | + service=g-api.failure
+2015-10-12 10:19:24.680 | + service=g-api
+2015-10-12 10:19:24.680 | + echo 'Error: Service g-api is not running'
+2015-10-12 10:19:24.680 | Error: Service g-api is not running
+2015-10-12 10:19:24.680 | + for service in '$failures'
+2015-10-12 10:19:24.680 | ++ basename /opt/stack/status/stack/g-reg.failure
+2015-10-12 10:19:24.697 | + service=g-reg.failure
+2015-10-12 10:19:24.697 | + service=g-reg
+2015-10-12 10:19:24.697 | + echo 'Error: Service g-reg is not running'
+2015-10-12 10:19:24.697 | Error: Service g-reg is not running
+2015-10-12 10:19:24.697 | + for service in '$failures'
+2015-10-12 10:19:24.698 | ++ basename /opt/stack/status/stack/n-api.failure
+2015-10-12 10:19:24.701 | + service=n-api.failure
+2015-10-12 10:19:24.702 | + service=n-api
+2015-10-12 10:19:24.702 | + echo 'Error: Service n-api is not running'
+2015-10-12 10:19:24.702 | Error: Service n-api is not running
+2015-10-12 10:19:24.702 | + for service in '$failures'
+2015-10-12 10:19:24.702 | ++ basename /opt/stack/status/stack/n-novnc.failure
+2015-10-12 10:19:24.704 | + service=n-novnc.failure
+2015-10-12 10:19:24.704 | + service=n-novnc
+2015-10-12 10:19:24.704 | + echo 'Error: Service n-novnc is not running'
+2015-10-12 10:19:24.704 | Error: Service n-novnc is not running
+2015-10-12 10:19:24.704 | + for service in '$failures'
+2015-10-12 10:19:24.705 | ++ basename /opt/stack/status/stack/q-agt.failure
+2015-10-12 10:19:24.712 | + service=q-agt.failure
+2015-10-12 10:19:24.712 | + service=q-agt
+2015-10-12 10:19:24.712 | + echo 'Error: Service q-agt is not running'
+2015-10-12 10:19:24.712 | Error: Service q-agt is not running
+2015-10-12 10:19:24.712 | + for service in '$failures'
+2015-10-12 10:19:24.713 | ++ basename /opt/stack/status/stack/q-svc.failure
+2015-10-12 10:19:24.736 | + service=q-svc.failure
+2015-10-12 10:19:24.737 | + service=q-svc
+2015-10-12 10:19:24.737 | + echo 'Error: Service q-svc is not running'
+2015-10-12 10:19:24.737 | Error: Service q-svc is not running
+2015-10-12 10:19:24.737 | + '[' -n '/opt/stack/status/stack/c-api.failure
+2015-10-12 10:19:24.737 | /opt/stack/status/stack/g-api.failure
+2015-10-12 10:19:24.737 | /opt/stack/status/stack/g-reg.failure
+2015-10-12 10:19:24.737 | /opt/stack/status/stack/n-api.failure
+2015-10-12 10:19:24.737 | /opt/stack/status/stack/n-novnc.failure
+2015-10-12 10:19:24.737 | /opt/stack/status/stack/q-agt.failure
+2015-10-12 10:19:24.737 | /opt/stack/status/stack/q-svc.failure' ']'
+2015-10-12 10:19:24.737 | + die 1530 'More details about the above errors can be found with screen, with ./rejoin-stack.sh'
+2015-10-12 10:19:24.737 | + local exitcode=0
+2015-10-12 10:19:24.737 | [Call Trace]
+2015-10-12 10:19:24.737 | ./stack.sh:1321:service_check
+2015-10-12 10:19:24.737 | /home/sdnuser/devstack/functions-common:1530:die
+2015-10-12 10:19:24.743 | [ERROR] /home/sdnuser/devstack/functions-common:1530 More details about the above errors can be found with screen, with ./rejoin-stack.sh
+2015-10-12 10:19:25.754 | Error on exit
