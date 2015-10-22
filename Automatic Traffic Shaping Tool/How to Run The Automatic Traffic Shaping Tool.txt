@@ -1,0 +1,32 @@
+#Edit System environment Variables
+AUTO_SHAPER : <Installation Directory of Auto_Shaper tool>
+
+#Put the following war files in tomacat's webapps directory
+AutomaticTrafficShapingGUI.war
+GraphicalTrafficAnalyser.war
+
+#Ensure that MonitoringTool is not running already
+Start task manager and kill all processes named Java(TM) Platform SE binary
+
+#Double click on MonitoringTool.jar to start the application
+
+#start Tomcat
+Go to tomcat's bin dir -> startup.bat
+
+#Access Web Apps
+http://localhost:8080/GraphicalTrafficAnalyser/Home.jsp
+http://localhost:8080/AutomaticTrafficShapingGUI/Home.jsp
+
+--------------------To Stop the application--------------
+#Stop MonitoringTool
+Start task manager and kill all processes named Java(TM) Platform SE binary
+
+#Stop Tomcat
+Go to tomcat's bin dir -> startup.bat
+
+Notes:
+Ensure that JAVA_HOME environment variable is set to directory of java 1.8
+To Change any configuration properties, edit config.properties
+
+
+

@@ -1,0 +1,12 @@
+#Wed Oct 21 18:35:26 IST 2015
+threshold=10
+dataplaneName=dp0p224p1
+routerName=vyatta
+routerPass=vyatta
+routerURL=http://10.76.110.94
+incrementSize=256
+decrementSize=256
+upperLimit=2048
+lowerLimit=512
+controllerURL=http://10.76.110.84:8181
+waitTimeBetweenPolicyChange=30

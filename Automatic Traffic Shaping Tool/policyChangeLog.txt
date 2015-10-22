@@ -1,0 +1,16 @@
+Qos Policy Name: TSDemo
+Real-Time Traffic Bandwidth: 512kbps
+Packet Delay Count in last 10 intervals
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+Total no. of delayed packets in the last 10 intervals :0
+ Current threshold for congestion : 50 delayed packets
+Despite low bandwidth utilisation can't decrease the bandwidth further. Limit Reached!!
